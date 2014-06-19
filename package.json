@@ -1,0 +1,38 @@
+{
+  "name": "Game Shell Remote",
+  "version": "0.0.0",
+  "description": "A layer of abstraction between a web socket server and a game module to provide reusable functionality, like detecting websocket support for the specific websocket server being used, a lobby for joining people to games, a game message broadcaster, a timer, and a handler for broken websocket connections.",
+  "main": "init.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "nodeunit test"
+  },
+  "dependencies":{
+    "cookie-signature": "0.0.x",
+    "crypto": "0.0.x",
+    "ejs": "0.8.x",
+    "events": "0.5.x",
+    "express": "3.0.x",
+    "express-ejs-layouts": "0.3.x",
+    "path": "0.4.x",
+    "sequelize": "1.7.x",
+    "sha1": "1.0.x",
+    "validator": "0.4.x",
+    "websocket": "1.0.x",
+    "redis":"0.8.x",
+    "async":"0.2.x",
+    "heapdump":"0.1.x",
+    "connect-redis":"1.4.x",
+    "optimist":"0.4.x",
+    "mysql":"2.0.x",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ebenshap/gameShellRemote.git"
+  },
+  "author": "Eben Shapiro",
+  "license": "gpl",
+  "readmeFilename": "README.md",
+}
