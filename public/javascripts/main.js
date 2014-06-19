@@ -1,6 +1,6 @@
 var supportVarified = 0
 
-connection=new WebSocket('ws://localhost:3000')
+connection=new WebSocket('ws://'+url+':3000')
 connection.onopen = function(){
   connection.send('hello')
 }
