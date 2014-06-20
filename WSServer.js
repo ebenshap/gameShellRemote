@@ -12,10 +12,32 @@ module.exports.create = function(server){
       console.log('Closed :-(')
     })
     
-    connection.on('message', function(message){
-      if (message.type === 'utf8') {
-        console.log('Received Message: ' + message.utf8Data);
-        connection.sendUTF(message.utf8Data);
+    connection.on('message', function(request){
+      if (request.type === 'utf8') {
+        var data = request.utf8Data
+        var response = ''
+        
+        if(data =='hello'){
+          response='hi'
+          connection.sendUTF(response);
+        }
+        
+        if(data=='join'){
+          
+          var names = [
+            'Harry',
+            'Curly',
+            'Moe'
+          ]
+          var game = {}
+          
+          response= JSON.stringify({
+            game:game,
+            names:names
+          })
+          connection.sendUTF(response);
+        }
+        
       }
     })
     

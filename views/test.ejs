@@ -1,5 +1,6 @@
 <html>
 <head>
+
 <script>
 
 var url = "<%= url %>"
@@ -9,9 +10,24 @@ var url = "<%= url %>"
 <script src="/javascripts/deps/jquery-ui-1.10.3.custom.min.js" type="text/javascript" ></script>
 <script src="/javascripts/deps/underscore.js" type="text/javascript" ></script>
 <script src="/javascripts/deps/backbone.js" type="text/javascript" ></script>
+<script src="/javascripts/MVs/choose.js" type="text/javascript" ></script>
 <script src="/javascripts/main.js" type="text/javascript" ></script>
 </head>
 <body>
-<p>Will this browser be okay for this version of websockets?</p>
+
+<div id='choose'>
+  <p>Enter Game</p>
+  <button class='button' >Submit!</button>
+</div>
+
+<div id='wait'>
+  <p>Waiting Room</p>
+  <ul></ul>
+</div>
+
+<div id='play'>
+  <p>Game</p>
+</div>
+
 </body>
 </html>
